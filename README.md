@@ -1,5 +1,4 @@
-# LinebotTool
-
+# Linebot
 ## Step1. 創建line app
 https://developers.line.me/en/docs/messaging-api/overview/
 ## Step2. 開發者建立機器人
@@ -175,8 +174,71 @@ MyLineBotMsg::create ()
 ---
 ## 彈性樣板訊息
 + 官網：https://developers.line.me/en/reference/messaging-api/#action-objects
-+ *由於sdk尚未更新，以下自己撰寫*
++ 線上樣板模擬器：https://developers.line.me/console/fx/
++ 其他範例：https://medium.com/linedevth/using-flex-message-to-create-world-cup-line-bot-60e0591f9d02
 
+`[由於sdk尚未更新，以下自己撰寫]`
+
++ 類似組成html的概念，以區塊化分，需吐出json格式
+```json=
+{
+    "type": "bubble",
+    "header": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+                "type": "text",
+                "text": "Header text"
+            }
+        ]
+    },
+    "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+                "type": "button",
+                "action": {
+                    "type": "postback",
+                    "data": "Buy",
+                    "text": "action=123"
+                },
+                "style": "primary",
+                "color": "#0000ff"
+            }
+        ]
+    },
+    "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+                "type": "text",
+                "text": "Footer text"
+            }
+        ]
+    },
+    "hero": {
+        "type": "image",
+        "url": "https://example.com/flex/images/image.jpg"
+    },
+    "styles": {
+        "header": {
+            "backgroundColor": "#00ffff"
+        },
+        "hero": {
+            "separator": true,
+            "separatorColor": "#000000"
+        },
+        "footer": {
+            "backgroundColor": "#00ffff",
+            "separator": true,
+            "separatorColor": "#000000"
+        }
+    }
+}
+```
 + 單個訊息：Flex bubble messages
 ```php=
 MyLineBotMsg::create()->flex('test',
