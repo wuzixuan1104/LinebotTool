@@ -9,9 +9,6 @@ https://developers.line.me/en/docs/messaging-api/building-sample-bot-with-heroku
 ![](https://i.imgur.com/iXFYCff.png)
 + 所有圖片、檔案或連結必須使用https
 
-## Step4. 匯入linebot SDK
-+ https://github.com/line/line-bot-sdk-php
-
 ## [補充] 在本機端測試 (非正規)
 + 將vendor中的LINEBot/Event/Parser/EventRequestParser.php
     + 將某行註解
