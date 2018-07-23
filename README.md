@@ -1,9 +1,8 @@
-# Linebot
-## Step1. 創建line app
-https://developers.line.me/en/docs/messaging-api/overview/
-## Step2. 開發者建立機器人
-https://developers.line.me/en/docs/messaging-api/building-sample-bot-with-heroku/
-## Step3. 設定webhook
+# Linebot Tool
+
+## Step1. 開始建立機器人
+https://developers.line.me/en/docs/messaging-api/building-bot/
+## Step2. 設定webhook
 + 機器人會call這隻api回傳訊息, 所以這隻api如同index.php進入點
 
 ![](https://i.imgur.com/iXFYCff.png)
@@ -33,7 +32,7 @@ public static function parseEventRequest($body, $channelSecret, $signature)
 
 ![](https://i.imgur.com/HqVSMwq.png)
 
-## Step4. 匯入linebot SDK
+## Step3. 匯入linebot SDK
 + 連結：https://github.com/line/line-bot-sdk-php
 + 安裝line message api sdk
 ```bash=
@@ -60,7 +59,7 @@ foreach( $events as $event ) {
 ```
 + 更多回應類型參考：https://developers.line.me/en/docs/messaging-api/reference/#webhook-event-objects
 
-## Step5. 發送訊息樣式
+## Step4. 回應訊息樣式
 + 文字：Text message
 ```php=
 MyLineBotMsg::create()
@@ -174,7 +173,7 @@ MyLineBotMsg::create ()
 + 線上樣板模擬器：https://developers.line.me/console/fx/
 + 其他範例：https://medium.com/linedevth/using-flex-message-to-create-world-cup-line-bot-60e0591f9d02
 
-`[由於sdk尚未更新，以下自己撰寫]`
++ `[由於sdk尚未更新，以下自己撰寫]`
 
 + 類似組成html的概念，以區塊化分，需吐出json格式
 ```json=
