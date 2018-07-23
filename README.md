@@ -4,8 +4,6 @@
 https://developers.line.me/en/docs/messaging-api/building-bot/
 ## Step2. 設定webhook
 + 機器人會call這隻api回傳訊息, 所以這隻api如同index.php進入點
-
-![](https://i.imgur.com/iXFYCff.png)
 + 所有圖片、檔案或連結必須使用https
 
 ## [補充] 在本機端測試 (非正規)
